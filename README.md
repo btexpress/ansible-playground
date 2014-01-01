@@ -17,5 +17,22 @@ Since it's the first time connecting to each host with ssh,
 you'll have to manually accept each host's key for it to be
 saved in `known_hosts`.
 
+Now try making each host say "hello"
+
+    ansible all -a "/bin/echo hello"
+
+    # output:
+    # three | success | rc=0 >>
+    # hello
+    # 
+    # two | success | rc=0 >>
+    # hello
+    # 
+    # one | success | rc=0 >>
+    # hello
+
+
+
+
 Now that you're logged in, continue onto 
 [Getting Started](http://www.ansibleworks.com/docs/intro_getting_started.html)!
