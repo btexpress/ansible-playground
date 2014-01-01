@@ -12,9 +12,9 @@ with Ansible and all proper networking config stuff.
     vagrant ssh ansible
     ansible all -m ping
 
-This will ping all known hosts for the first time.
+This will ping all known hosts.
 Since it's the first time connecting to each host with ssh,
-the you'll have to manually accept each host's key for it to be
+you'll have to manually accept each host's key for it to be
 saved in `known_hosts`.
 
 Now that you're logged in, continue onto 
