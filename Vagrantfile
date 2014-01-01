@@ -3,12 +3,33 @@
 
 $install_hosts = <<-eos
 cat <<HERE > /etc/hosts
+127.0.0.1        localhost
 192.168.33.10    ansible
 192.168.33.20    one
 192.168.33.21    two
 192.168.33.22    three
 HERE
 eos
+
+$skeleton_key_install = <<-eos
+cp /vagrant/vagrant_private_key /home/vagrant/.ssh/id_rsa
+chmod 600 /home/vagrant/.ssh/id_rsa
+chown vagrant:vagrant /home/vagrant/.ssh/id_rsa
+eos
+
+$ansible_install = <<-eos
+apt-get update
+apt-get install python-dev python-pip vim -y
+pip install ansible
+#ansible config
+mkdir -p /etc/ansible
+cat <<HERE > /etc/ansible/hosts
+one
+two
+three
+HERE
+eos
+
 
 Vagrant.configure("2") do |config|
 
@@ -18,18 +39,24 @@ Vagrant.configure("2") do |config|
   
 
   config.vm.define "ansible" do |ansible|
+    ansible.vm.hostname = "ansible"
     ansible.vm.network "private_network", ip: "192.168.33.10"
+    ansible.vm.provision "shell", inline: $skeleton_key_install
+    ansible.vm.provision "shell", inline: $ansible_install
   end
 
   config.vm.define "slave1" do |one|
+    one.vm.hostname = "one"
     one.vm.network :private_network, ip: "192.168.33.20"
   end
 
   config.vm.define "slave2" do |two|
+    two.vm.hostname = "two"
     two.vm.network :private_network, ip: "192.168.33.21"
   end
 
   config.vm.define "slave3" do |three|
+    three.vm.hostname = "three"
     three.vm.network :private_network, ip: "192.168.33.22"
   end
 
