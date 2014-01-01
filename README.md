@@ -34,5 +34,4 @@ Now try making each host say "hello"
 
 
 
-Now that you're logged in, continue onto 
-[Getting Started](http://www.ansibleworks.com/docs/intro_getting_started.html)!
+Now that you're all set up, you're ready to [hit the docs](http://www.ansibleworks.com/docs/)!
