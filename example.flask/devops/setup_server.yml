@@ -28,11 +28,9 @@
         - python
         - python-minimal
         - python2.7
-        - python2.7-minimal 
-
-
-    - name: install pip
-      action: easy_install name=pip
+        - python2.7-minimal
+        - python-setuptools
+        - python-pip
 
     - name: install various libraries with pip
       action: pip name={{item}} state=present
