@@ -28,11 +28,21 @@
         - python
         - python-minimal
         - python2.7
-        - python2.7-minimal 
+        - python2.7-minimal
+        - python-setuptools
+        - python-pip
 
+    - name: upgrade pip and setuptools to latest versions
+      pip: name={{item}} state=latest
+      with_items:
+        - setuptools
+        - pip
 
-    - name: install pip
-      action: easy_install name=pip
+    - name: remove ubuntu pip/setuptools
+      apt: pkg={{item}} state=absent
+      with_items:
+        - python-setuptools
+        - python-pip
 
     - name: install various libraries with pip
       action: pip name={{item}} state=present
