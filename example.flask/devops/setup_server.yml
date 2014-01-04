@@ -1,0 +1,63 @@
+---
+
+- hosts: one
+  user: vagrant
+  sudo: True
+
+  tasks:
+    - name: pycurl
+      apt: pkg=python-pycurl state=installed
+
+    - name: add nginx ppa
+      action: apt_repository repo=ppa:nginx/stable state=present
+
+    - name: install git
+      action: apt pkg=git-core state=installed
+
+    - name: install nginx
+      action: apt pkg=nginx state=installed
+
+    - name: install python
+      apt: pkg={{ item }} state=installed
+      with_items:
+        - python-dev
+        - libexpat1-dev
+        - libpython2.7
+        - python2.7-dev
+        - libexpat1
+        - python
+        - python-minimal
+        - python2.7
+        - python2.7-minimal 
+
+
+    - name: install pip
+      action: easy_install name=pip
+
+    - name: install various libraries with pip
+      action: pip name={{item}} state=present
+      with_items:
+        - virtualenv
+        - supervisor
+        - uwsgi
+
+    - name: remove default nginx site
+      action: file path=/etc/nginx/sites-enabled/default state=absent
+
+    - name: write nginx.conf
+      action: template src=templates/nginx.conf dest=/etc/nginx/nginx.conf
+
+    - name: create supervisord config folder
+      action: file dest=/etc/supervisor state=directory owner=root
+
+    - name: create supervisord config
+      action: template src=templates/supervisord.conf dest=/etc/supervisord.conf
+
+    - name: create supervisord init script
+      action: template src=templates/supervisord.sh dest=/etc/init.d/supervisord mode=0755
+
+    - name: start supervisord service and have it run during system startup
+      action: service name=supervisord state=started enabled=yes
+
+    - name: create webapps directory
+      action: file dest=/srv/webapps state=directory
