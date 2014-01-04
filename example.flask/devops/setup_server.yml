@@ -32,6 +32,18 @@
         - python-setuptools
         - python-pip
 
+    - name: upgrade pip and setuptools to latest versions
+      pip: name={{item}} state=latest
+      with_items:
+        - setuptools
+        - pip
+
+    - name: remove ubuntu pip/setuptools
+      apt: pkg={{item}} state=absent
+      with_items:
+        - python-setuptools
+        - python-pip
+
     - name: install various libraries with pip
       action: pip name={{item}} state=present
       with_items:
