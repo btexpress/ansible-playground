@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+box = 'btexpress/ubuntu64-14.04'
+
 $install_hosts = <<-eos
 cat <<HERE > /etc/hosts
 127.0.0.1        localhost
@@ -33,7 +35,7 @@ eos
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "precise64"
+  config.vm.box = box
 
   config.vm.provision "shell", inline: $install_hosts
   
