@@ -1,0 +1,521 @@
+Bringing machine 'ansible' up with 'virtualbox' provider...
+Bringing machine 'slave1' up with 'virtualbox' provider...
+Bringing machine 'slave2' up with 'virtualbox' provider...
+Bringing machine 'slave3' up with 'virtualbox' provider...
+==> ansible: Importing base box 'ubuntu/precise64'...
+[KProgress: 90%[K==> ansible: Matching MAC address for NAT networking...
+==> ansible: Checking if box 'ubuntu/precise64' is up to date...
+==> ansible: Setting the name of the VM: ansible-playground_ansible_1473366531258_62477
+==> ansible: Clearing any previously set forwarded ports...
+==> ansible: Clearing any previously set network interfaces...
+==> ansible: Preparing network interfaces based on configuration...
+    ansible: Adapter 1: nat
+    ansible: Adapter 2: hostonly
+==> ansible: Forwarding ports...
+    ansible: 22 (guest) => 2222 (host) (adapter 1)
+==> ansible: Booting VM...
+==> ansible: Waiting for machine to boot. This may take a few minutes...
+    ansible: SSH address: 127.0.0.1:2222
+    ansible: SSH username: vagrant
+    ansible: SSH auth method: private key
+    ansible: 
+    ansible: Vagrant insecure key detected. Vagrant will automatically replace
+    ansible: this with a newly generated keypair for better security.
+    ansible: 
+    ansible: Inserting generated public key within guest...
+    ansible: Removing insecure key from the guest if it's present...
+    ansible: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> ansible: Machine booted and ready!
+==> ansible: Checking for guest additions in VM...
+    ansible: The guest additions on this VM do not match the installed version of
+    ansible: VirtualBox! In most cases this is fine, but in rare cases it can
+    ansible: prevent things such as shared folders from working properly. If you see
+    ansible: shared folder errors, please make sure the guest additions within the
+    ansible: virtual machine match the version of VirtualBox you have installed on
+    ansible: your host and reload your VM.
+    ansible: 
+    ansible: Guest Additions Version: 4.1.44
+    ansible: VirtualBox Version: 5.0
+==> ansible: [vagrant-hostsupdater] Checking for host entries
+==> ansible: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)
+==> ansible: [vagrant-hostsupdater]   192.168.33.10  ansible  # VAGRANT: cf24b45733f09c96e2c75826d20280c7 (ansible) / 80d3b34d-76f6-4763-9520-33b22781629a
+==> ansible: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.
+==> ansible: Setting hostname...
+==> ansible: Configuring and enabling network interfaces...
+==> ansible: Mounting shared folders...
+    ansible: /vagrant => /home/wtooles/git-repos/ansible-playground
+==> ansible: Running provisioner: shell...
+    ansible: Running: inline script
+==> ansible: stdin: is not a tty
+==> ansible: Running provisioner: shell...
+    ansible: Running: inline script
+==> ansible: stdin: is not a tty
+==> ansible: Running provisioner: shell...
+    ansible: Running: inline script
+==> ansible: stdin: is not a tty
+==> ansible: Get:1 http://security.ubuntu.com precise-security Release.gpg [198 B]
+==> ansible: Hit http://archive.ubuntu.com precise Release.gpg
+==> ansible: Get:2 http://security.ubuntu.com precise-security Release [55.5 kB]
+==> ansible: Get:3 http://archive.ubuntu.com precise-updates Release.gpg [198 B]
+==> ansible: Hit http://archive.ubuntu.com precise-backports Release.gpg
+==> ansible: Hit http://archive.ubuntu.com precise Release
+==> ansible: Get:4 http://archive.ubuntu.com precise-updates Release [55.4 kB]
+==> ansible: Get:5 http://security.ubuntu.com precise-security/main Sources [143 kB]
+==> ansible: Get:6 http://security.ubuntu.com precise-security/universe Sources [50.0 kB]
+==> ansible: Hit http://archive.ubuntu.com precise-backports Release
+==> ansible: Get:7 http://security.ubuntu.com precise-security/main amd64 Packages [631 kB]
+==> ansible: Get:8 http://archive.ubuntu.com precise/main Sources [934 kB]
+==> ansible: Get:9 http://security.ubuntu.com precise-security/universe amd64 Packages [134 kB]
+==> ansible: Get:10 http://security.ubuntu.com precise-security/main i386 Packages [698 kB]
+==> ansible: Get:11 http://archive.ubuntu.com precise/restricted Sources [5,470 B]
+==> ansible: Get:12 http://archive.ubuntu.com precise/universe Sources [5,019 kB]
+==> ansible: Get:13 http://security.ubuntu.com precise-security/universe i386 Packages [143 kB]
+==> ansible: Get:14 http://security.ubuntu.com precise-security/main TranslationIndex [208 B]
+==> ansible: Get:15 http://security.ubuntu.com precise-security/universe TranslationIndex [205 B]
+==> ansible: Get:16 http://archive.ubuntu.com precise/multiverse Sources [155 kB]
+==> ansible: Get:17 http://security.ubuntu.com precise-security/main Translation-en [260 kB]
+==> ansible: Hit http://archive.ubuntu.com precise/main amd64 Packages
+==> ansible: Get:18 http://security.ubuntu.com precise-security/universe Translation-en [86.0 kB]
+==> ansible: Hit http://archive.ubuntu.com precise/restricted amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/universe amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/main i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/restricted i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/universe i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/main TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/restricted TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/universe TranslationIndex
+==> ansible: Get:19 http://archive.ubuntu.com precise-updates/main Sources [497 kB]
+==> ansible: Get:20 http://archive.ubuntu.com precise-updates/restricted Sources [8,708 B]
+==> ansible: Get:21 http://archive.ubuntu.com precise-updates/universe Sources [129 kB]
+==> ansible: Get:22 http://archive.ubuntu.com precise-updates/multiverse Sources [10.2 kB]
+==> ansible: Get:23 http://archive.ubuntu.com precise-updates/main amd64 Packages [1,010 kB]
+==> ansible: Get:24 http://archive.ubuntu.com precise-updates/restricted amd64 Packages [16.2 kB]
+==> ansible: Get:25 http://archive.ubuntu.com precise-updates/universe amd64 Packages [279 kB]
+==> ansible: Get:26 http://archive.ubuntu.com precise-updates/multiverse amd64 Packages [16.9 kB]
+==> ansible: Get:27 http://archive.ubuntu.com precise-updates/main i386 Packages [1,077 kB]
+==> ansible: Get:28 http://archive.ubuntu.com precise-updates/restricted i386 Packages [16.1 kB]
+==> ansible: Get:29 http://archive.ubuntu.com precise-updates/universe i386 Packages [288 kB]
+==> ansible: Get:30 http://archive.ubuntu.com precise-updates/multiverse i386 Packages [17.1 kB]
+==> ansible: Get:31 http://archive.ubuntu.com precise-updates/main TranslationIndex [208 B]
+==> ansible: Get:32 http://archive.ubuntu.com precise-updates/multiverse TranslationIndex [202 B]
+==> ansible: Get:33 http://archive.ubuntu.com precise-updates/restricted TranslationIndex [202 B]
+==> ansible: Get:34 http://archive.ubuntu.com precise-updates/universe TranslationIndex [205 B]
+==> ansible: Get:35 http://archive.ubuntu.com precise-backports/main Sources [5,922 B]
+==> ansible: Get:36 http://archive.ubuntu.com precise-backports/restricted Sources [28 B]
+==> ansible: Get:37 http://archive.ubuntu.com precise-backports/universe Sources [44.2 kB]
+==> ansible: Get:38 http://archive.ubuntu.com precise-backports/multiverse Sources [5,750 B]
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/main Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise/restricted Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise/universe Translation-en
+==> ansible: Get:39 http://archive.ubuntu.com precise-updates/main Translation-en [421 kB]
+==> ansible: Get:40 http://archive.ubuntu.com precise-updates/multiverse Translation-en [9,806 B]
+==> ansible: Get:41 http://archive.ubuntu.com precise-updates/restricted Translation-en [3,869 B]
+==> ansible: Get:42 http://archive.ubuntu.com precise-updates/universe Translation-en [167 kB]
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe Translation-en
+==> ansible: Fetched 12.4 MB in 9s (1,321 kB/s)
+==> ansible: Reading package lists...
+==> ansible: Reading package lists...
+==> ansible: Building dependency tree...
+==> ansible: Reading state information...
+==> ansible: vim is already the newest version.
+==> ansible: The following extra packages will be installed:
+==> ansible:   libexpat1-dev libssl-dev libssl-doc python-setuptools python2.7-dev
+==> ansible:   zlib1g-dev
+==> ansible: The following NEW packages will be installed:
+==> ansible:   libexpat1-dev libssl-dev libssl-doc python-dev python-pip python-setuptools
+==> ansible:   python2.7-dev zlib1g-dev
+==> ansible: 0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+==> ansible: Need to get 33.1 MB of archives.
+==> ansible: After this operation, 49.8 MB of additional disk space will be used.
+==> ansible: Get:1 http://archive.ubuntu.com/ubuntu/ precise-updates/main libexpat1-dev amd64 2.0.1-7.2ubuntu1.4 [216 kB]
+==> ansible: Get:2 http://archive.ubuntu.com/ubuntu/ precise/main zlib1g-dev amd64 1:1.2.3.4.dfsg-3ubuntu4 [165 kB]
+==> ansible: Get:3 http://archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.36 [1,580 kB]
+==> ansible: Get:4 http://archive.ubuntu.com/ubuntu/ precise-updates/main libssl-doc all 1.0.1-4ubuntu5.36 [1,042 kB]
+==> ansible: Get:5 http://archive.ubuntu.com/ubuntu/ precise-updates/main python2.7-dev amd64 2.7.3-0ubuntu3.8 [29.5 MB]
+==> ansible: Get:6 http://archive.ubuntu.com/ubuntu/ precise-updates/main python-dev amd64 2.7.3-0ubuntu2.2 [1,090 B]
+==> ansible: Get:7 http://archive.ubuntu.com/ubuntu/ precise/main python-setuptools all 0.6.24-1ubuntu1 [441 kB]
+==> ansible: Get:8 http://archive.ubuntu.com/ubuntu/ precise/universe python-pip all 1.0-1build1 [95.1 kB]
+==> ansible: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> ansible: Fetched 33.1 MB in 6s (5,193 kB/s)
+==> ansible: Selecting previously unselected package libexpat1-dev.
+==> ansible: (Reading database ... 
+==> ansible: 66241 files and directories currently installed.)
+==> ansible: Unpacking libexpat1-dev (from .../libexpat1-dev_2.0.1-7.2ubuntu1.4_amd64.deb) ...
+==> ansible: Selecting previously unselected package zlib1g-dev.
+==> ansible: Unpacking zlib1g-dev (from .../zlib1g-dev_1%3a1.2.3.4.dfsg-3ubuntu4_amd64.deb) ...
+==> ansible: Selecting previously unselected package libssl-dev.
+==> ansible: Unpacking libssl-dev (from .../libssl-dev_1.0.1-4ubuntu5.36_amd64.deb) ...
+==> ansible: Selecting previously unselected package libssl-doc.
+==> ansible: Unpacking libssl-doc (from .../libssl-doc_1.0.1-4ubuntu5.36_all.deb) ...
+==> ansible: Selecting previously unselected package python2.7-dev.
+==> ansible: Unpacking python2.7-dev (from .../python2.7-dev_2.7.3-0ubuntu3.8_amd64.deb) ...
+==> ansible: Selecting previously unselected package python-dev.
+==> ansible: Unpacking python-dev (from .../python-dev_2.7.3-0ubuntu2.2_amd64.deb) ...
+==> ansible: Selecting previously unselected package python-setuptools.
+==> ansible: Unpacking python-setuptools (from .../python-setuptools_0.6.24-1ubuntu1_all.deb) ...
+==> ansible: Selecting previously unselected package python-pip.
+==> ansible: Unpacking python-pip (from .../python-pip_1.0-1build1_all.deb) ...
+==> ansible: Processing triggers for man-db ...
+==> ansible: Setting up libexpat1-dev (2.0.1-7.2ubuntu1.4) ...
+==> ansible: Setting up zlib1g-dev (1:1.2.3.4.dfsg-3ubuntu4) ...
+==> ansible: Setting up libssl-dev (1.0.1-4ubuntu5.36) ...
+==> ansible: Setting up libssl-doc (1.0.1-4ubuntu5.36) ...
+==> ansible: Setting up python2.7-dev (2.7.3-0ubuntu3.8) ...
+==> ansible: Setting up python-dev (2.7.3-0ubuntu2.2) ...
+==> ansible: Setting up python-setuptools (0.6.24-1ubuntu1) ...
+==> ansible: Setting up python-pip (1.0-1build1) ...
+==> ansible: Downloading/unpacking ansible
+==> ansible:   Running setup.py egg_info for package ansible
+==> ansible:     
+==> ansible:     no previously-included directories found matching 'v2'
+==> ansible:     no previously-included directories found matching 'docsite'
+==> ansible:     no previously-included directories found matching 'ticket_stubs'
+==> ansible:     no previously-included directories found matching 'packaging'
+==> ansible:     no previously-included directories found matching 'test'
+==> ansible:     no previously-included directories found matching 'hacking'
+==> ansible:     warning: no previously-included files found matching 'lib/ansible/modules/core/.git*'
+==> ansible:     warning: no previously-included files found matching 'lib/ansible/modules/extras/.git*'
+==> ansible:     no previously-included directories found matching 'lib/ansible/modules/core/.git'
+==> ansible:     no previously-included directories found matching 'lib/ansible/modules/extras/.git'
+==> ansible: Requirement already satisfied (use --upgrade to upgrade): paramiko in /usr/lib/python2.7/dist-packages (from ansible)
+==> ansible: Downloading/unpacking jinja2 (from ansible)
+==> ansible:   Running setup.py egg_info for package jinja2
+==> ansible:     
+==> ansible:     warning: no files found matching 'run-tests.py'
+==> ansible:     warning: no files found matching '*' under directory 'custom_fixers'
+==> ansible:     warning: no files found matching '*' under directory 'jinja2/testsuite/res'
+==> ansible:     warning: no previously-included files matching '*' found under directory 'docs/_build'
+==> ansible:     warning: no previously-included files matching '*.pyc' found under directory 'jinja2'
+==> ansible:     warning: no previously-included files matching '*.pyc' found under directory 'docs'
+==> ansible:     warning: no previously-included files matching '*.pyo' found under directory 'jinja2'
+==> ansible:     warning: no previously-included files matching '*.pyo' found under directory 'docs'
+==> ansible: Requirement already satisfied (use --upgrade to upgrade): PyYAML in /usr/lib/python2.7/dist-packages (from ansible)
+==> ansible: Requirement already satisfied (use --upgrade to upgrade): distribute in /usr/lib/python2.7/dist-packages (from ansible)
+==> ansible: Downloading/unpacking pycrypto>=2.6 (from ansible)
+==> ansible:   Running setup.py egg_info for package pycrypto
+==> ansible:     
+==> ansible: Downloading/unpacking MarkupSafe (from jinja2->ansible)
+==> ansible:   Downloading MarkupSafe-0.23.tar.gz
+==> ansible:   Running setup.py egg_info for package MarkupSafe
+==> ansible:     
+==> ansible: Installing collected packages: ansible, jinja2, pycrypto, MarkupSafe
+==> ansible:   Running setup.py install for ansible
+==> ansible:     changing mode of build/scripts-2.7/ansible from 644 to 755
+==> ansible:     changing mode of build/scripts-2.7/ansible-playbook from 644 to 755
+==> ansible:     changing mode of build/scripts-2.7/ansible-pull from 644 to 755
+==> ansible:     changing mode of build/scripts-2.7/ansible-doc from 644 to 755
+==> ansible:     changing mode of build/scripts-2.7/ansible-galaxy from 644 to 755
+==> ansible:     changing mode of build/scripts-2.7/ansible-console from 644 to 755
+==> ansible:     changing mode of build/scripts-2.7/ansible-vault from 644 to 755
+==> ansible:     
+==> ansible:     no previously-included directories found matching 'v2'
+==> ansible:     no previously-included directories found matching 'docsite'
+==> ansible:     no previously-included directories found matching 'ticket_stubs'
+==> ansible:     no previously-included directories found matching 'test'
+==> ansible:     no previously-included directories found matching 'hacking'
+==> ansible:     warning: no previously-included files found matching 'lib/ansible/modules/core/.git*'
+==> ansible:     warning: no previously-included files found matching 'lib/ansible/modules/extras/.git*'
+==> ansible:     no previously-included directories found matching 'lib/ansible/modules/core/.git'
+==> ansible:     no previously-included directories found matching 'lib/ansible/modules/extras/.git'
+==> ansible:     changing mode of /usr/local/bin/ansible-doc to 755
+==> ansible:     changing mode of /usr/local/bin/ansible-galaxy to 755
+==> ansible:     changing mode of /usr/local/bin/ansible to 755
+==> ansible:     changing mode of /usr/local/bin/ansible-playbook to 755
+==> ansible:     changing mode of /usr/local/bin/ansible-vault to 755
+==> ansible:     changing mode of /usr/local/bin/ansible-console to 755
+==> ansible:     changing mode of /usr/local/bin/ansible-pull to 755
+==> ansible:   Running setup.py install for jinja2
+==> ansible:     
+==> ansible:     warning: no files found matching 'run-tests.py'
+==> ansible:     warning: no files found matching '*' under directory 'custom_fixers'
+==> ansible:     warning: no files found matching '*' under directory 'jinja2/testsuite/res'
+==> ansible:     warn
+==> ansible: ing: no previously-included files matching '*' found under directory 'docs/_build'
+==> ansible:     warning: no previously-included files matching '*.pyc' found under directory 'jinja2'
+==> ansible:     warning: no previously-included files matching '*.pyc' found under directory 'docs'
+==> ansible:     warning: no previously-included files matching '*.pyo' found under directory 'jinja2'
+==> ansible:     warning: no previously-included files matching '*.pyo' found under directory 'docs'
+==> ansible:   Found existing installation: pycrypto 2.4.1
+==> ansible:     Uninstalling pycrypto:
+==> ansible:       Successfully uninstalled pycrypto
+==> ansible:   Running setup.py install for pycrypto
+==> ansible:     checking for gcc... gcc
+==> ansible:     checking whether the C compiler works... yes
+==> ansible:     checking for C compiler default output file name... a.out
+==> ansible:     checking for suffix of executables...
+==> ansible:     checking whether we are cross compiling... no
+==> ansible:     checking for suffix of object files... o
+==> ansible:     checking whether we are using the GNU C compiler... yes
+==> ansible:     checking whether gcc accepts -g... yes
+==> ansible:     checking for gcc option to accept ISO C89... none needed
+==> ansible:     checking for __gmpz_init in -lgmp... no
+==> ansible:     checking for __gmpz_init in -lmpir... no
+==> ansible:     checking whether mpz_powm is declared... no
+==> ansible:     checking whether mpz_powm_sec is declared... no
+==> ansible:     checking how to run the C preprocessor... gcc -E
+==> ansible:     checking for grep that handles long lines and -e... /bin/grep
+==> ansible:     checking for egrep... /bin/grep -E
+==> ansible:     checking for ANSI C header files... yes
+==> ansible:     checking for sys/types.h... yes
+==> ansible:     checking for sys/stat.h... yes
+==> ansible:     checking for stdlib.h... yes
+==> ansible:     checking for string.h... yes
+==> ansible:     checking for memory.h... yes
+==> ansible:     checking for strings.h... yes
+==> ansible:     checking for inttypes.h... yes
+==> ansible:     checking for stdint.h... yes
+==> ansible:     checking for unistd.h... yes
+==> ansible:     checking for inttypes.h... (cached) yes
+==> ansible:     checking limits.h usability... yes
+==> ansible:     checking limits.h presence... yes
+==> ansible:     checking for limits.h... yes
+==> ansible:     checking stddef.h usability... yes
+==> ansible:     checking stddef.h presence... yes
+==> ansible:     checking for stddef.h... yes
+==> ansible:     checking for stdint.h... (cached) yes
+==> ansible:     checking for stdlib.h... (cached) yes
+==> ansible:     checking for string.h... (cached) yes
+==> ansible:     checking wchar.h usability... yes
+==> ansible:     checking wchar.h presence... yes
+==> ansible:     checking for wchar.h... yes
+==> ansible:     checking for inline... inline
+==> ansible:     checking for int16_t... yes
+==> ansible:     checking for int32_t... yes
+==> ansible:     checking for int64_t... yes
+==> ansible:     checking for int8_t... yes
+==> ansible:     checking for size_t... yes
+==> ansible:     checking for uint16_t... yes
+==> ansible:     checking for uint32_t... yes
+==> ansible:     checking for uint64_t... yes
+==> ansible:     checking for uint8_t... yes
+==> ansible:     checking for stdlib.h... (cached) yes
+==> ansible:     checking for GNU libc compatible malloc... yes
+==> ansible:     checking for memmove... yes
+==> ansible:     checking for memset... yes
+==> ansible:     configure: creating ./config.status
+==> ansible:     config.status: creating src/config.h
+==> ansible:     warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
+==> ansible:     building 'Crypto.Hash._MD2' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD2.c -o build/temp.linux-x86_64-2.7/src/MD2.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/MD2.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_MD2.so
+==> ansible:     building 'Crypto.Hash._MD4' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD4.c -o build/temp.linux-x86_64-2.7/src/MD4.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/MD4.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_MD4.so
+==> ansible:     building 'Crypto.Hash._SHA256' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA256.c -o build/temp.linux-x86_64-2.7/src/SHA256.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/S
+==> ansible: HA256.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA256.so
+==> ansible:     building 'Crypto.Hash._SHA224' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA224.c -o build/temp.linux-x86_64-2.7/src/SHA224.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/SHA224.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA224.so
+==> ansible:     building 'Crypto.Hash._SHA384' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA384.c -o build/temp.linux-x86_64-2.7/src/SHA384.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/SHA384.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA384.so
+==> ansible:     building 'Crypto.Hash._SHA512' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA512.c -o build/temp.linux-x86_64-2.7/src/SHA512.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/SHA512.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA512.so
+==> ansible:     building 'Crypto.Hash._RIPEMD160' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -DPCT_LITTLE_ENDIAN=1 -Isrc/ -I/usr/include/python2.7 -c src/RIPEMD160.c -o build/temp.linux-x86_64-2.7/src/RIPEMD160.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/RIPEMD160.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_RIPEMD160.so
+==> ansible:     building 'Crypto.Cipher._AES' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/AES.c -o build/temp.linux-x86_64-2.7/src/AES.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/AES.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_AES.so
+==> ansible:     building 'Crypto.Cipher._ARC2' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/ARC2.c -o build/temp.linux-x86_64-2.7/src/ARC2.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/ARC2.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_ARC2.so
+==> ansible:     building 'Crypto.Cipher._Blowfish' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/Blowfish.c -o build/temp.linux-x86_64-2.7/src/Blowfish.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/Blowfish.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_Blowfish.so
+==> ansible:     building 'Crypto.Cipher._CAST' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/CAST.c -o build/temp.linux-x86_64-2.7/src/CAST.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/CAST.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_CAST.so
+==> ansible:     building 'Crypto.Cipher._DES' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python2.7 -c src/DES.c -o build/temp.linux-x86_64-2.7/src/DES.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/DES.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_DES.so
+==> ansible:     building 'Crypto.Cipher._DES3' extension
+==> ansible:     gcc 
+==> ansible: -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python2.7 -c src/DES3.c -o build/temp.linux-x86_64-2.7/src/DES3.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/DES3.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_DES3.so
+==> ansible:     building 'Crypto.Cipher._ARC4' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/ARC4.c -o build/temp.linux-x86_64-2.7/src/ARC4.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/ARC4.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_ARC4.so
+==> ansible:     building 'Crypto.Cipher._XOR' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/XOR.c -o build/temp.linux-x86_64-2.7/src/XOR.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/XOR.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_XOR.so
+==> ansible:     building 'Crypto.Util.strxor' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/strxor.c -o build/temp.linux-x86_64-2.7/src/strxor.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/strxor.o -o build/lib.linux-x86_64-2.7/Crypto/Util/strxor.so
+==> ansible:     building 'Crypto.Util._counter' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/_counter.c -o build/temp.linux-x86_64-2.7/src/_counter.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/_counter.o -o build/lib.linux-x86_64-2.7/Crypto/Util/_counter.so
+==> ansible:     
+==> ansible:   Running setup.py install for MarkupSafe
+==> ansible:     
+==> ansible:     building 'markupsafe._speedups' extension
+==> ansible:     gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c markupsafe/_speedups.c -o build/temp.linux-x86_64-2.7/markupsafe/_speedups.o
+==> ansible:     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/markupsafe/_speedups.o -o build/lib.linux-x86_64-2.7/markupsafe/_speedups.so
+==> ansible: Successfully installed ansible jinja2 pycrypto MarkupSafe
+==> ansible: Cleaning up...
+==> ansible: Requirement already satisfied (use --upgrade to upgrade): markupsafe in /usr/local/lib/python2.7/dist-packages
+==> ansible: Cleaning up...
+==> slave1: Importing base box 'ubuntu/precise64'...
+[KProgress: 90%[K==> slave1: Matching MAC address for NAT networking...
+==> slave1: Checking if box 'ubuntu/precise64' is up to date...
+==> slave1: Setting the name of the VM: ansible-playground_slave1_1473366598565_34669
+==> slave1: Clearing any previously set forwarded ports...
+==> slave1: Fixed port collision for 22 => 2222. Now on port 2200.
+==> slave1: Clearing any previously set network interfaces...
+==> slave1: Preparing network interfaces based on configuration...
+    slave1: Adapter 1: nat
+    slave1: Adapter 2: hostonly
+==> slave1: Forwarding ports...
+    slave1: 22 (guest) => 2200 (host) (adapter 1)
+==> slave1: Booting VM...
+==> slave1: Waiting for machine to boot. This may take a few minutes...
+    slave1: SSH address: 127.0.0.1:2200
+    slave1: SSH username: vagrant
+    slave1: SSH auth method: private key
+    slave1: 
+    slave1: Vagrant insecure key detected. Vagrant will automatically replace
+    slave1: this with a newly generated keypair for better security.
+    slave1: 
+    slave1: Inserting generated public key within guest...
+    slave1: Removing insecure key from the guest if it's present...
+    slave1: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> slave1: Machine booted and ready!
+==> slave1: Checking for guest additions in VM...
+    slave1: The guest additions on this VM do not match the installed version of
+    slave1: VirtualBox! In most cases this is fine, but in rare cases it can
+    slave1: prevent things such as shared folders from working properly. If you see
+    slave1: shared folder errors, please make sure the guest additions within the
+    slave1: virtual machine match the version of VirtualBox you have installed on
+    slave1: your host and reload your VM.
+    slave1: 
+    slave1: Guest Additions Version: 4.1.44
+    slave1: VirtualBox Version: 5.0
+==> slave1: [vagrant-hostsupdater] Checking for host entries
+==> slave1: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)
+==> slave1: [vagrant-hostsupdater]   192.168.33.20  one  # VAGRANT: 6e6e2768c91145d16f51efa6ee524a39 (slave1) / 74bf304a-3575-4e5f-b0ad-d79ad295d3bf
+==> slave1: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.
+==> slave1: Setting hostname...
+==> slave1: Configuring and enabling network interfaces...
+==> slave1: Mounting shared folders...
+    slave1: /vagrant => /home/wtooles/git-repos/ansible-playground
+==> slave1: Running provisioner: shell...
+    slave1: Running: inline script
+==> slave1: stdin: is not a tty
+==> slave2: Importing base box 'ubuntu/precise64'...
+[KProgress: 90%[K==> slave2: Matching MAC address for NAT networking...
+==> slave2: Checking if box 'ubuntu/precise64' is up to date...
+==> slave2: Setting the name of the VM: ansible-playground_slave2_1473366633518_83149
+==> slave2: Clearing any previously set forwarded ports...
+==> slave2: Fixed port collision for 22 => 2222. Now on port 2201.
+==> slave2: Clearing any previously set network interfaces...
+==> slave2: Preparing network interfaces based on configuration...
+    slave2: Adapter 1: nat
+    slave2: Adapter 2: hostonly
+==> slave2: Forwarding ports...
+    slave2: 22 (guest) => 2201 (host) (adapter 1)
+==> slave2: Booting VM...
+==> slave2: Waiting for machine to boot. This may take a few minutes...
+    slave2: SSH address: 127.0.0.1:2201
+    slave2: SSH username: vagrant
+    slave2: SSH auth method: private key
+    slave2: 
+    slave2: Vagrant insecure key detected. Vagrant will automatically replace
+    slave2: this with a newly generated keypair for better security.
+    slave2: 
+    slave2: Inserting generated public key within guest...
+    slave2: Removing insecure key from the guest if it's present...
+    slave2: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> slave2: Machine booted and ready!
+==> slave2: Checking for guest additions in VM...
+    slave2: The guest additions on this VM do not match the installed version of
+    slave2: VirtualBox! In most cases this is fine, but in rare cases it can
+    slave2: prevent things such as shared folders from working properly. If you see
+    slave2: shared folder errors, please make sure the guest additions within the
+    slave2: virtual machine match the version of VirtualBox you have installed on
+    slave2: your host and reload your VM.
+    slave2: 
+    slave2: Guest Additions Version: 4.1.44
+    slave2: VirtualBox Version: 5.0
+==> slave2: [vagrant-hostsupdater] Checking for host entries
+==> slave2: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)
+==> slave2: [vagrant-hostsupdater]   192.168.33.21  two  # VAGRANT: 78fd869af1dc07274320bc93b0987d5a (slave2) / d36678bf-8e2a-4578-9547-b01426368430
+==> slave2: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.
+==> slave2: Setting hostname...
+==> slave2: Configuring and enabling network interfaces...
+==> slave2: Mounting shared folders...
+    slave2: /vagrant => /home/wtooles/git-repos/ansible-playground
+==> slave2: Running provisioner: shell...
+    slave2: Running: inline script
+==> slave2: stdin: is not a tty
+==> slave3: Importing base box 'ubuntu/precise64'...
+[KProgress: 90%[K==> slave3: Matching MAC address for NAT networking...
+==> slave3: Checking if box 'ubuntu/precise64' is up to date...
+==> slave3: Setting the name of the VM: ansible-playground_slave3_1473366668407_18480
+==> slave3: Clearing any previously set forwarded ports...
+==> slave3: Fixed port collision for 22 => 2222. Now on port 2202.
+==> slave3: Clearing any previously set network interfaces...
+==> slave3: Preparing network interfaces based on configuration...
+    slave3: Adapter 1: nat
+    slave3: Adapter 2: hostonly
+==> slave3: Forwarding ports...
+    slave3: 22 (guest) => 2202 (host) (adapter 1)
+==> slave3: Booting VM...
+==> slave3: Waiting for machine to boot. This may take a few minutes...
+    slave3: SSH address: 127.0.0.1:2202
+    slave3: SSH username: vagrant
+    slave3: SSH auth method: private key
+    slave3: 
+    slave3: Vagrant insecure key detected. Vagrant will automatically replace
+    slave3: this with a newly generated keypair for better security.
+    slave3: 
+    slave3: Inserting generated public key within guest...
+    slave3: Removing insecure key from the guest if it's present...
+    slave3: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> slave3: Machine booted and ready!
+==> slave3: Checking for guest additions in VM...
+    slave3: The guest additions on this VM do not match the installed version of
+    slave3: VirtualBox! In most cases this is fine, but in rare cases it can
+    slave3: prevent things such as shared folders from working properly. If you see
+    slave3: shared folder errors, please make sure the guest additions within the
+    slave3: virtual machine match the version of VirtualBox you have installed on
+    slave3: your host and reload your VM.
+    slave3: 
+    slave3: Guest Additions Version: 4.1.44
+    slave3: VirtualBox Version: 5.0
+==> slave3: [vagrant-hostsupdater] Checking for host entries
+==> slave3: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)
+==> slave3: [vagrant-hostsupdater]   192.168.33.22  three  # VAGRANT: b68a3d5042fad75be69820cf1569d8f3 (slave3) / 1792de8d-42c4-435b-a35c-26dd7436f7d5
+==> slave3: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.
+==> slave3: Setting hostname...
+==> slave3: Configuring and enabling network interfaces...
+==> slave3: Mounting shared folders...
+    slave3: /vagrant => /home/wtooles/git-repos/ansible-playground
+==> slave3: Running provisioner: shell...
+    slave3: Running: inline script
+==> slave3: stdin: is not a tty
+
+real	2m54.213s
+user	0m18.004s
+sys	0m6.632s

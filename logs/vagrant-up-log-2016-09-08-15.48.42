@@ -1,0 +1,291 @@
+Bringing machine 'ansible' up with 'virtualbox' provider...
+Bringing machine 'slave1' up with 'virtualbox' provider...
+Bringing machine 'slave2' up with 'virtualbox' provider...
+Bringing machine 'slave3' up with 'virtualbox' provider...
+==> ansible: Box 'ubuntu/precise64' could not be found. Attempting to find and install...
+    ansible: Box Provider: virtualbox
+    ansible: Box Version: >= 0
+==> ansible: Loading metadata for box 'ubuntu/precise64'
+    ansible: URL: https://atlas.hashicorp.com/ubuntu/precise64
+==> ansible: Adding box 'ubuntu/precise64' (v20160824.0.0) for provider: virtualbox
+    ansible: Downloading: https://atlas.hashicorp.com/ubuntu/boxes/precise64/versions/20160824.0.0/providers/virtualbox.box
+[K    ansible: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    ansible: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    ansible: Progress: 0% (Rate: 207k/s, Estimated time remaining: 0:42:59)[K    ansible: Progress: 0% (Rate: 384k/s, Estimated time remaining: 0:19:19)[K    ansible: Progress: 0% (Rate: 743k/s, Estimated time remaining: 0:09:13)[K    ansible: Progress: 1% (Rate: 1284k/s, Estimated time remaining: 0:05:05)[K    ansible: Progress: 2% (Rate: 1976k/s, Estimated time remaining: 0:03:11)[K    ansible: Progress: 4% (Rate: 3443k/s, Estimated time remaining: 0:02:06)[K    ansible: Progress: 8% (Rate: 5498k/s, Estimated time remaining: 0:01:25)[K    ansible: Progress: 11% (Rate: 7800k/s, Estimated time remaining: 0:01:03)[K    ansible: Progress: 15% (Rate: 9.9M/s, Estimated time remaining: 0:00:50)[K    ansible: Progress: 20% (Rate: 12.1M/s, Estimated time remaining: 0:00:40)[K    ansible: Progress: 25% (Rate: 13.9M/s, Estimated time remaining: 0:00:34)[K    ansible: Progress: 30% (Rate: 15.0M/s, Estimated time remaining: 0:00:29)[K    ansible: Progress: 32% (Rate: 14.0M/s, Estimated time remaining: 0:00:28)[K    ansible: Progress: 32% (Rate: 11.5M/s, Estimated time remaining: 0:00:29)[K    ansible: Progress: 34% (Rate: 9405k/s, Estimated time remaining: 0:00:30)[K    ansible: Progress: 35% (Rate: 7430k/s, Estimated time remaining: 0:00:29)[K    ansible: Progress: 37% (Rate: 4917k/s, Estimated time remaining: 0:00:30)[K    ansible: Progress: 37% (Rate: 3627k/s, Estimated time remaining: 0:00:31)[K    ansible: Progress: 38% (Rate: 3616k/s, Estimated time remaining: 0:00:32)[K    ansible: Progress: 39% (Rate: 3543k/s, Estimated time remaining: 0:00:32)[K    ansible: Progress: 40% (Rate: 3381k/s, Estimated time remaining: 0:00:31)[K    ansible: Progress: 42% (Rate: 3781k/s, Estimated time remaining: 0:00:30)[K    ansible: Progress: 44% (Rate: 4807k/s, Estimated time remaining: 0:00:29)[K    ansible: Progress: 46% (Rate: 5798k/s, Estimated time remaining: 0:00:28)[K    ansible: Progress: 48% (Rate: 6490k/s, Estimated time remaining: 0:00:27)[K    ansible: Progress: 50% (Rate: 6787k/s, Estimated time remaining: 0:00:26)[K    ansible: Progress: 52% (Rate: 6923k/s, Estimated time remaining: 0:00:25)[K    ansible: Progress: 54% (Rate: 6990k/s, Estimated time remaining: 0:00:24)[K    ansible: Progress: 56% (Rate: 7006k/s, Estimated time remaining: 0:00:23)[K    ansible: Progress: 58% (Rate: 7046k/s, Estimated time remaining: 0:00:22)[K    ansible: Progress: 60% (Rate: 7145k/s, Estimated time remaining: 0:00:20)[K    ansible: Progress: 62% (Rate: 7333k/s, Estimated time remaining: 0:00:19)[K    ansible: Progress: 65% (Rate: 7652k/s, Estimated time remaining: 0:00:18)[K    ansible: Progress: 67% (Rate: 8070k/s, Estimated time remaining: 0:00:16)[K    ansible: Progress: 70% (Rate: 8671k/s, Estimated time remaining: 0:00:15)[K    ansible: Progress: 74% (Rate: 9499k/s, Estimated time remaining: 0:00:13)[K    ansible: Progress: 77% (Rate: 10.3M/s, Estimated time remaining: 0:00:11)[K    ansible: Progress: 82% (Rate: 11.6M/s, Estimated time remaining: 0:00:08)[K    ansible: Progress: 87% (Rate: 13.1M/s, Estimated time remaining: 0:00:06)[K    ansible: Progress: 91% (Rate: 14.3M/s, Estimated time remaining: 0:00:04)[K    ansible: Progress: 96% (Rate: 15.3M/s, Estimated time remaining: 0:00:01)[K==> ansible: Successfully added box 'ubuntu/precise64' (v20160824.0.0) for 'virtualbox'!
+==> ansible: Importing base box 'ubuntu/precise64'...
+[KProgress: 90%[K==> ansible: Matching MAC address for NAT networking...
+==> ansible: Checking if box 'ubuntu/precise64' is up to date...
+==> ansible: Setting the name of the VM: ansible-playground_ansible_1473364175378_25221
+==> ansible: Clearing any previously set forwarded ports...
+==> ansible: Clearing any previously set network interfaces...
+==> ansible: Preparing network interfaces based on configuration...
+    ansible: Adapter 1: nat
+    ansible: Adapter 2: hostonly
+==> ansible: Forwarding ports...
+    ansible: 22 (guest) => 2222 (host) (adapter 1)
+==> ansible: Booting VM...
+==> ansible: Waiting for machine to boot. This may take a few minutes...
+    ansible: SSH address: 127.0.0.1:2222
+    ansible: SSH username: vagrant
+    ansible: SSH auth method: private key
+    ansible: 
+    ansible: Vagrant insecure key detected. Vagrant will automatically replace
+    ansible: this with a newly generated keypair for better security.
+    ansible: 
+    ansible: Inserting generated public key within guest...
+    ansible: Removing insecure key from the guest if it's present...
+    ansible: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> ansible: Machine booted and ready!
+[ansible] GuestAdditions versions on your host (5.0.26) and guest (4.1.44) do not match.
+stdin: is not a tty
+ * Stopping VirtualBox Additions
+   ...done.
+ERROR: Module vboxsf does not exist in /proc/modules
+stdin: is not a tty
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libxfixes3 libxcomposite1 xfonts-encodings x11-xkb-utils xserver-xorg-core
+  xserver-common libgl1-mesa-dri xfonts-utils libxfont1 xfonts-base dkms
+  libfontenc1 libxdamage1 libxrandr2 libxkbfile1 libllvm3.0
+Use 'apt-get autoremove' to remove them.
+The following packages will be REMOVED:
+  virtualbox-guest-dkms* virtualbox-guest-utils* virtualbox-guest-x11*
+0 upgraded, 0 newly installed, 3 to remove and 0 not upgraded.
+After this operation, 10.7 MB disk space will be freed.
+(Reading database ... 66241 files and directories currently installed.)
+Removing virtualbox-guest-dkms ...
+
+-------- Uninstall Beginning --------
+Module:  virtualbox-guest
+Version: 4.1.44
+Kernel:  3.2.0-109-generic (x86_64)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+vboxguest.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.2.0-109-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxsf.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.2.0-109-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxvideo.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.2.0-109-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod....
+
+DKMS: uninstall completed.
+
+-------- Uninstall Beginning --------
+Module:  virtualbox-guest
+Version: 4.1.44
+Kernel:  3.2.0-109-virtual (x86_64)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+vboxguest.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.2.0-109-virtual/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxsf.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.2.0-109-virtual/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxvideo.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.2.0-109-virtual/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod....
+
+DKMS: uninstall completed.
+
+------------------------------
+Deleting module version: 4.1.44
+completely from the DKMS tree.
+------------------------------
+Done.
+Removing virtualbox-guest-x11 ...
+Purging configuration files for virtualbox-guest-x11 ...
+Removing virtualbox-guest-utils ...
+Purging configuration files for virtualbox-guest-utils ...
+Processing triggers for man-db ...
+Processing triggers for ureadahead ...
+stdin: is not a tty
+Reading package lists...
+Building dependency tree...
+Reading state information...
+dkms is already the newest version.
+dkms set to manually installed.
+linux-headers-3.2.0-109-virtual is already the newest version.
+linux-headers-3.2.0-109-virtual set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libxfixes3 libxcomposite1 xfonts-encodings x11-xkb-utils xserver-xorg-core
+  xserver-common libgl1-mesa-dri xfonts-utils libxfont1 xfonts-base
+  libfontenc1 libxdamage1 libxrandr2 libxkbfile1 libllvm3.0
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Copy iso file /usr/share/virtualbox/VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+stdin: is not a tty
+mount: block device /tmp/VBoxGuestAdditions.iso is write-protected, mounting read-only
+Installing Virtualbox Guest Additions 5.0.26 - guest version is 4.1.44
+stdin: is not a tty
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.0.26 Guest Additions for Linux............
+VirtualBox Guest Additions installer
+Copying additional installer modules ...
+Installing additional modules ...
+Removing existing VirtualBox DKMS kernel modules ...done.
+Removing existing VirtualBox non-DKMS kernel modules ...done.
+Building the VirtualBox Guest Additions kernel modules ...done.
+Doing non-kernel setup of the Guest Additions ...done.
+Starting the VirtualBox Guest AdditionsInstalling the Window System drivers
+Could not find the X.Org or XFree86 Window System, skipping.
+ ...done.
+stdin: is not a tty
+==> ansible: Checking for guest additions in VM...
+==> ansible: [vagrant-hostsupdater] Checking for host entries
+==> ansible: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)
+==> ansible: [vagrant-hostsupdater]   192.168.33.10  ansible  # VAGRANT: 226538ac6bf642c40d01a6d6de19c15c (ansible) / 9fb4ee3f-9080-4ea7-a2c1-ba1af57bf315
+==> ansible: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.
+==> ansible: Setting hostname...
+==> ansible: Configuring and enabling network interfaces...
+==> ansible: Mounting shared folders...
+    ansible: /vagrant => /home/wtooles/git-repos/ansible-playground
+==> ansible: Running provisioner: shell...
+    ansible: Running: inline script
+==> ansible: stdin: is not a tty
+==> ansible: Running provisioner: shell...
+    ansible: Running: inline script
+==> ansible: stdin: is not a tty
+==> ansible: Running provisioner: shell...
+    ansible: Running: inline script
+==> ansible: stdin: is not a tty
+==> ansible: Get:1 http://security.ubuntu.com precise-security Release.gpg [198 B]
+==> ansible: Hit http://archive.ubuntu.com precise Release.gpg
+==> ansible: Get:2 http://security.ubuntu.com precise-security Release [55.5 kB]
+==> ansible: Get:3 http://archive.ubuntu.com precise-updates Release.gpg [198 B]
+==> ansible: Hit http://archive.ubuntu.com precise-backports Release.gpg
+==> ansible: Hit http://archive.ubuntu.com precise Release
+==> ansible: Get:4 http://archive.ubuntu.com precise-updates Release [55.4 kB]
+==> ansible: Get:5 http://security.ubuntu.com precise-security/main Sources [143 kB]
+==> ansible: Get:6 http://security.ubuntu.com precise-security/universe Sources [50.0 kB]
+==> ansible: Hit http://archive.ubuntu.com precise-backports Release
+==> ansible: Get:7 http://security.ubuntu.com precise-security/main amd64 Packages [631 kB]
+==> ansible: Get:8 http://archive.ubuntu.com precise/main Sources [934 kB]
+==> ansible: Get:9 http://security.ubuntu.com precise-security/universe amd64 Packages [134 kB]
+==> ansible: Get:10 http://security.ubuntu.com precise-security/main i386 Packages [698 kB]
+==> ansible: Get:11 http://archive.ubuntu.com precise/restricted Sources [5,470 B]
+==> ansible: Get:12 http://archive.ubuntu.com precise/universe Sources [5,019 kB]
+==> ansible: Get:13 http://archive.ubuntu.com precise/multiverse Sources [155 kB]
+==> ansible: Hit http://archive.ubuntu.com precise/main amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/restricted amd64 Packages
+==> ansible: Get:14 http://security.ubuntu.com precise-security/universe i386 Packages [143 kB]
+==> ansible: Hit http://archive.ubuntu.com precise/universe amd64 Packages
+==> ansible: Get:15 http://security.ubuntu.com precise-security/main TranslationIndex [208 B]
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse amd64 Packages
+==> ansible: Get:16 http://security.ubuntu.com precise-security/universe TranslationIndex [205 B]
+==> ansible: Hit http://archive.ubuntu.com precise/main i386 Packages
+==> ansible: Get:17 http://security.ubuntu.com precise-security/main Translation-en [260 kB]
+==> ansible: Hit http://archive.ubuntu.com precise/restricted i386 Packages
+==> ansible: Get:18 http://security.ubuntu.com precise-security/universe Translation-en [86.0 kB]
+==> ansible: Hit http://archive.ubuntu.com precise/universe i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise/main TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/restricted TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/universe TranslationIndex
+==> ansible: Get:19 http://archive.ubuntu.com precise-updates/main Sources [497 kB]
+==> ansible: Get:20 http://archive.ubuntu.com precise-updates/restricted Sources [8,708 B]
+==> ansible: Get:21 http://archive.ubuntu.com precise-updates/universe Sources [129 kB]
+==> ansible: Get:22 http://archive.ubuntu.com precise-updates/multiverse Sources [10.2 kB]
+==> ansible: Get:23 http://archive.ubuntu.com precise-updates/main amd64 Packages [1,010 kB]
+==> ansible: Get:24 http://archive.ubuntu.com precise-updates/restricted amd64 Packages [16.2 kB]
+==> ansible: Get:25 http://archive.ubuntu.com precise-updates/universe amd64 Packages [279 kB]
+==> ansible: Get:26 http://archive.ubuntu.com precise-updates/multiverse amd64 Packages [16.9 kB]
+==> ansible: Get:27 http://archive.ubuntu.com precise-updates/main i386 Packages [1,077 kB]
+==> ansible: Get:28 http://archive.ubuntu.com precise-updates/restricted i386 Packages [16.1 kB]
+==> ansible: Get:29 http://archive.ubuntu.com precise-updates/universe i386 Packages [288 kB]
+==> ansible: Get:30 http://archive.ubuntu.com precise-updates/multiverse i386 Packages [17.1 kB]
+==> ansible: Get:31 http://archive.ubuntu.com precise-updates/main TranslationIndex [208 B]
+==> ansible: Get:32 http://archive.ubuntu.com precise-updates/multiverse TranslationIndex [202 B]
+==> ansible: Get:33 http://archive.ubuntu.com precise-updates/restricted TranslationIndex [202 B]
+==> ansible: Get:34 http://archive.ubuntu.com precise-updates/universe TranslationIndex [205 B]
+==> ansible: Get:35 http://archive.ubuntu.com precise-backports/main Sources [5,922 B]
+==> ansible: Get:36 http://archive.ubuntu.com precise-backports/restricted Sources [28 B]
+==> ansible: Get:37 http://archive.ubuntu.com precise-backports/universe Sources [44.2 kB]
+==> ansible: Get:38 http://archive.ubuntu.com precise-backports/multiverse Sources [5,750 B]
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse amd64 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse i386 Packages
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe TranslationIndex
+==> ansible: Hit http://archive.ubuntu.com precise/main Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise/multiverse Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise/restricted Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise/universe Translation-en
+==> ansible: Get:39 http://archive.ubuntu.com precise-updates/main Translation-en [421 kB]
+==> ansible: Get:40 http://archive.ubuntu.com precise-updates/multiverse Translation-en [9,806 B]
+==> ansible: Get:41 http://archive.ubuntu.com precise-updates/restricted Translation-en [3,869 B]
+==> ansible: Get:42 http://archive.ubuntu.com precise-updates/universe Translation-en [167 kB]
+==> ansible: Hit http://archive.ubuntu.com precise-backports/main Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise-backports/multiverse Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise-backports/restricted Translation-en
+==> ansible: Hit http://archive.ubuntu.com precise-backports/universe Translation-en
+==> ansible: Fetched 12.4 MB in 8s (1,389 kB/s)
+==> ansible: Reading package lists...
+==> ansible: Reading package lists...
+==> ansible: Building dependency tree...
+==> ansible: Reading state information...
+==> ansible: vim is already the newest version.
+==> ansible: The following packages were automatically installed and are no longer required:
+==> ansible:   libxfixes3 libxcomposite1 xfonts-encodings x11-xkb-utils xserver-xorg-core
+==> ansible:   xserver-common libgl1-mesa-dri xfonts-utils libxfont1 xfonts-base
+==> ansible:   libfontenc1 libxdamage1 libxrandr2 libxkbfile1 libllvm3.0
+==> ansible: Use 'apt-get autoremove' to remove them.
+==> ansible: The following extra packages will be installed:
+==> ansible:   libexpat1-dev libssl-dev libssl-doc python-setuptools python2.7-dev
+==> ansible:   zlib1g-dev
+==> ansible: The following NEW packages will be installed:
+==> ansible:   libexpat1-dev libssl-dev libssl-doc python-dev python-pip python-setuptools
+==> ansible:   python2.7-dev zlib1g-dev
+==> ansible: 0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+==> ansible: Need to get 33.1 MB of archives.
+==> ansible: After this operation, 49.8 MB of additional disk space will be used.
+==> ansible: Get:1 http://archive.ubuntu.com/ubuntu/ precise-updates/main libexpat1-dev amd64 2.0.1-7.2ubuntu1.4 [216 kB]
+==> ansible: Get:2 http://archive.ubuntu.com/ubuntu/ precise/main zlib1g-dev amd64 1:1.2.3.4.dfsg-3ubuntu4 [165 kB]
+==> ansible: Get:3 http://archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.36 [1,580 kB]
+==> ansible: Get:4 http://archive.ubuntu.com/ubuntu/ precise-updates/main libssl-doc all 1.0.1-4ubuntu5.36 [1,042 kB]
+==> ansible: Get:5 http://archive.ubuntu.com/ubuntu/ precise-updates/main python2.7-dev amd64 2.7.3-0ubuntu3.8 [29.5 MB]
