@@ -7,10 +7,11 @@ box = 'btexpress/ubuntu64-14.04'
 $install_hosts = <<-eos
 cat <<HERE > /etc/hosts
 127.0.0.1        localhost
-192.168.33.10    ansible
-192.168.33.20    one
-192.168.33.21    two
-192.168.33.22    three
+192.168.33.10    control
+192.168.33.20    lb01
+192.168.33.21    app01
+192.168.33.22    app02
+192.168.33.23    db01
 HERE
 eos
 
@@ -28,9 +29,10 @@ pip install markupsafe
 #ansible config
 mkdir -p /etc/ansible
 cat <<HERE > /etc/ansible/hosts
-one
-two
-three
+lb01
+app01
+app02
+db01
 HERE
 eos
 
@@ -72,41 +74,48 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = box
 
-  # Take this line out eventuall
+  # Take this line out eventually
 #  config.vbguest.auto_update = false
   #
 
   config.vm.provision "shell", inline: $install_hosts
   
 
-  config.vm.define "ansible" do |ansible|
-    ansible.vm.hostname = "ansible"
-    ansible.vm.network "private_network", ip: "192.168.33.10"
-    ansible.vm.provision "shell", inline: $skeleton_key_install
-    ansible.vm.provision "shell", inline: $ansible_install
-    ansible.vm.provision "shell", inline: $ansible_vagrant_key_install
-    ansible.vm.provision "shell", inline: $ansible_root_key_install
+  config.vm.define "control" do |control|
+    control.vm.hostname = "control"
+    control.vm.network "private_network", ip: "192.168.33.10"
+    control.vm.provision "shell", inline: $skeleton_key_install
+    control.vm.provision "shell", inline: $ansible_install
+    control.vm.provision "shell", inline: $ansible_vagrant_key_install
+    control.vm.provision "shell", inline: $ansible_root_key_install
   end
 
-  config.vm.define "slave1" do |one|
-    one.vm.hostname = "one"
-    one.vm.network :private_network, ip: "192.168.33.20"
-    one.vm.provision "shell", inline: $slaves_vagrant_key_install
-    one.vm.provision "shell", inline: $slaves_root_key_install
+  config.vm.define "lb01" do |lb01|
+    lb01.vm.hostname = "lb01"
+    lb01.vm.network :private_network, ip: "192.168.33.20"
+    lb01.vm.provision "shell", inline: $slaves_vagrant_key_install
+    lb01.vm.provision "shell", inline: $slaves_root_key_install
   end
 
-  config.vm.define "slave2" do |two|
-    two.vm.hostname = "two"
-    two.vm.network :private_network, ip: "192.168.33.21"
-    two.vm.provision "shell", inline: $slaves_vagrant_key_install
-    two.vm.provision "shell", inline: $slaves_root_key_install
+  config.vm.define "app01" do |app01|
+    app01.vm.hostname = "app01"
+    app01.vm.network :private_network, ip: "192.168.33.21"
+    app01.vm.provision "shell", inline: $slaves_vagrant_key_install
+    app01.vm.provision "shell", inline: $slaves_root_key_install
   end
 
-  config.vm.define "slave3" do |three|
-    three.vm.hostname = "three"
-    three.vm.network :private_network, ip: "192.168.33.22"
-    three.vm.provision "shell", inline: $slaves_vagrant_key_install
-    three.vm.provision "shell", inline: $slaves_root_key_install
+  config.vm.define "app02" do |app02|
+    app02.vm.hostname = "app02"
+    app02.vm.network :private_network, ip: "192.168.33.22"
+    app02.vm.provision "shell", inline: $slaves_vagrant_key_install
+    app02.vm.provision "shell", inline: $slaves_root_key_install
+  end
+
+  config.vm.define "db01" do |db01|
+    db01.vm.hostname = "db01"
+    db01.vm.network :private_network, ip: "192.168.33.23"
+    db01.vm.provision "shell", inline: $slaves_vagrant_key_install
+    db01.vm.provision "shell", inline: $slaves_root_key_install
   end
 
 
