@@ -14,8 +14,8 @@ with Ansible and all proper networking config stuff.
 ## Usage
 
     vagrant up
-    # The master server is called 'control'
-    vagrant ssh control
+    # The master server is called 'ansible'
+    vagrant ssh ansible
     ansible all -m ping
 
 This will ping all known hosts.
