@@ -6,9 +6,8 @@
 
 ## Ansible Playground
 
-The [Getting Started](http://www.ansibleworks.com/docs/intro_getting_started.html) documentation
-for Ansible assumes you have a couple of servers to play with.
-This Vagrantfile sets up three servers and a master, and installs the master
+The [documentation](http://docs.ansible.com/ansible/index.html) for Ansible assumes you have a couple of servers to play with.
+This Vagrantfile sets up four servers and a master (control machine), and installs the master
 with Ansible and all proper networking config stuff.
 
 ## Usage
@@ -28,13 +27,16 @@ Now try making each host say "hello"
     ansible all -a "/bin/echo hello"
 
     # output:
-    # three | success | rc=0 >>
+    # app01 | success | rc=0 >>
     # hello
     #
-    # two | success | rc=0 >>
+    # app02 | success | rc=0 >>
     # hello
     #
-    # one | success | rc=0 >>
+    # lb01 | success | rc=0 >>
+    # hello
+    #
+    # db01 | success | rc=0 >>
     # hello
 
 
