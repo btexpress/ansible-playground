@@ -1,3 +1,9 @@
+## Note 2016-09-08-2013:
+
+### This is NOW a fully functional, ready to go ansible playground with vagrant AND root ssh keys already installed.
+
+
+
 ## Ansible Playground
 
 The [Getting Started](http://www.ansibleworks.com/docs/intro_getting_started.html) documentation
